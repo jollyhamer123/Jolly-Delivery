@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#e5243b">
+  <title>Jolly Delivery | Deal Email Studio</title>
+  <style>
+    :root{--red:#e5243b;--red-dark:#bd172b;--blue:#1455cc;--navy:#101c35;--ink:#182238;--muted:#67738a;--line:#e2e7f0;--paper:#f5f7fb;--shadow:0 18px 42px #10254f16}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.top{background:var(--navy);color:white;padding:12px 22px;font-weight:800;letter-spacing:.4px}.top span{color:#ff7f8f}.wrap{max-width:1150px;margin:30px auto;padding:0 20px}.intro{background:linear-gradient(120deg,#10254f,#1455cc);border-radius:25px;padding:35px;color:white;box-shadow:var(--shadow);animation:enter .45s both}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:1.6px;font-weight:900;color:#ffd6db}.intro h1{font-size:clamp(30px,4.2vw,46px);letter-spacing:-1.5px;margin:11px 0}.intro p{color:#e2ebff;line-height:1.7;max-width:720px;margin:0}.layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:22px;margin-top:22px;align-items:start}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow);animation:enter .5s both}.panel h2{margin:0 0 7px;font-size:22px;letter-spacing:-.5px}.sub{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 20px}.field{margin:14px 0}.field label{display:block;font-size:12px;font-weight:850;margin-bottom:7px}.field input,.field textarea{width:100%;border:1px solid #cfd8e7;border-radius:11px;padding:12px 13px;font:inherit;color:var(--ink);background:#fff;outline:0;transition:border-color .2s,box-shadow .2s}.field input:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 4px #1455cc16}.field textarea{min-height:145px;resize:vertical;line-height:1.6}.field small{display:block;font-size:11px;color:var(--muted);margin-top:6px;line-height:1.45}.row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.send{width:100%;padding:15px;border:0;border-radius:12px;background:var(--red);color:#fff;font-weight:900;font-size:14px;box-shadow:0 8px 17px #e5243b22;transition:transform .2s,background .2s}.send:hover{transform:translateY(-2px);background:var(--red-dark)}.send:disabled{opacity:.65;cursor:wait;transform:none}.secure{background:#edf3ff;border:1px solid #d6e2fb;color:#384a6c;border-radius:12px;padding:13px 14px;font-size:12px;line-height:1.6;margin-top:15px}.status{padding:12px 14px;border-radius:10px;font-size:12px;font-weight:800;margin-top:13px;display:none;line-height:1.6}.status.show{display:block;animation:enter .25s both}.status.ok{background:#e4f8eb;color:#116a37}.status.err{background:#fff0f2;color:#9c1628}.preview-mail{border:1px solid var(--line);border-radius:15px;overflow:hidden;background:#fff}.preview-head{padding:19px;background:var(--navy);color:white}.preview-head small{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#ffb3be;font-weight:900}.preview-head h3{font-size:24px;line-height:1.25;margin:10px 0 0}.preview-body{padding:20px}.preview-body p{font-size:13px;line-height:1.75;color:#536078;white-space:pre-wrap;word-break:break-word}.preview-button{display:inline-block;border-radius:9px;background:var(--red);color:white;padding:11px 15px;font-size:12px;font-weight:900;margin-top:7px}.preview-footer{font-size:10px!important;color:#818da3!important;border-top:1px solid var(--line);padding-top:15px;margin-top:23px}.footnote{font-size:11px;color:var(--muted);line-height:1.7;margin:24px 0}.back{display:inline-block;color:var(--blue);font-size:13px;font-weight:900;margin-bottom:16px}.back:hover{text-decoration:underline;text-underline-offset:3px}@keyframes enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@media(max-width:800px){.layout{grid-template-columns:1fr}.wrap{margin:18px auto}.intro{padding:26px}.panel{padding:20px}}@media(max-width:430px){.row{grid-template-columns:1fr;gap:0}.wrap{padding:0 12px}.intro{border-radius:18px}.panel{padding:17px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="top">🔴 Jolly <span>Delivery</span> · Email Studio</div>
+  <main class="wrap">
+    <a class="back" href="/">← Back to Jolly Delivery store</a>
+    <section class="intro"><div class="kicker">For store admins</div><h1>Send a deal worth opening.</h1><p>Create a branded Jolly Delivery offer and send it to contacts on your opted-in Brevo marketing list. Your API credentials remain on the server; enter the admin token only when sending a campaign.</p></section>
+    <div class="layout">
+      <section class="panel">
+        <h2>Compose a campaign</h2><p class="sub">The campaign will be sent immediately after you confirm. Subscribers can unsubscribe from promotional emails.</p>
+        <form id="dealForm">
+          <div class="field"><label for="adminToken">Admin send token</label><input id="adminToken" type="password" autocomplete="off" required placeholder="Enter the JOLLY_DEALS_ADMIN_TOKEN value"><small>Configured in Netlify environment variables. Never add this token to the website source.</small></div>
+          <div class="field"><label for="subject">Email subject</label><input id="subject" maxlength="120" required value="Fresh deals picked for you | Jolly Delivery"></div>
+          <div class="field"><label for="previewText">Inbox preview text</label><input id="previewText" maxlength="180" value="New finds, useful favourites, and offers worth a look."></div>
+          <div class="field"><label for="headline">Email headline</label><input id="headline" maxlength="130" required value="A little joy. A really good deal."></div>
+          <div class="field"><label for="message">Deal message</label><textarea id="message" maxlength="1800" required>We've rounded up a fresh batch of Jolly finds to make your week a little brighter. Browse the latest picks, check the current prices, and see what catches your eye. Thanks for being part of our community!</textarea><small>Use plain text. Line breaks are kept in the email.</small></div>
+          <div class="row">
+            <div class="field"><label for="buttonText">Button label</label><input id="buttonText" maxlength="50" required value="Shop the deals"></div>
+            <div class="field"><label for="buttonUrl">Button destination (HTTPS)</label><input id="buttonUrl" type="url" required placeholder="https://your-site.netlify.app" value="https://"></div>
+          </div>
+          <button class="send" id="sendButton" type="submit">Review & send to subscribers →</button>
+          <div class="status" id="status" role="status" aria-live="polite"></div>
+          <div class="secure"><strong>Before sending:</strong> confirm that the recipient list contains only people who agreed to receive deals. Test your setup with a small list first. This page sends a real campaign, not a preview.</div>
+        </form>
+      </section>
+      <aside class="panel">
+        <h2>Live email preview</h2><p class="sub">Preview updates as you write. Subscribers receive the red-and-blue branded layout.</p>
+        <div class="preview-mail"><div class="preview-head"><small>Jolly Delivery · Deal drop</small><h3 id="previewHeadline">A little joy. A really good deal.</h3></div><div class="preview-body"><p id="previewMessage">We've rounded up a fresh batch of Jolly finds to make your week a little brighter. Browse the latest picks, check the current prices, and see what catches your eye. Thanks for being part of our community!</p><span class="preview-button" id="previewCta">Shop the deals</span><p class="preview-footer">You're receiving this because you opted in to Jolly Delivery deal emails. A clear unsubscribe link is included in the campaign.</p></div></div>
+        <p class="footnote">Real sending requires a Netlify deployment and a configured Brevo sender, list ID, API key, and admin token. See <strong>README.md</strong> in the project files.</p>
+      </aside>
+    </div>
+  </main>
+  <script>
+    const $=s=>document.querySelector(s);
+    const fields=['subject','previewText','headline','message','buttonText','buttonUrl'];
+    function updatePreview(){ $('#previewHeadline').textContent=$('#headline').value||'Your next Jolly deal';$('#previewMessage').textContent=$('#message').value||'Your message will appear here.';$('#previewCta').textContent=$('#buttonText').value||'Shop the deals'; }
+    fields.forEach(id=>$('#'+id).addEventListener('input',updatePreview));
+    $('#dealForm').addEventListener('submit',async e=>{
+      e.preventDefault();const token=$('#adminToken').value.trim(),button=$('#sendButton'),status=$('#status');
+      let url;try{url=new URL($('#buttonUrl').value);if(url.protocol!=='https:')throw new Error('Use an HTTPS link.')}catch{status.className='status show err';status.textContent='Please enter a valid HTTPS destination for the email button.';return}
+      const confirmed=window.confirm('Send this deal email now to everyone on the configured Jolly Delivery marketing list? Only proceed if every recipient opted in.');if(!confirmed)return;
+      button.disabled=true;button.textContent='Sending campaign…';status.className='status';status.textContent='';
+      try{const response=await fetch('/.netlify/functions/send-deal',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({subject:$('#subject').value,previewText:$('#previewText').value,headline:$('#headline').value,message:$('#message').value,buttonText:$('#buttonText').value,buttonUrl:url.href})});const data=await response.json().catch(()=>({}));if(!response.ok||!data.success)throw new Error(data.error||'Could not send the campaign.');status.className='status show ok';status.textContent='Campaign submitted to Brevo. Campaign ID: '+data.campaignId+'. Check Brevo for delivery status.';}catch(err){status.className='status show err';status.textContent=err.message||'Could not send the campaign. Check your Netlify configuration.';}finally{button.disabled=false;button.textContent='Review & send to subscribers →';}
+    });
+    updatePreview();
+  </script>
+</body>
+</html>

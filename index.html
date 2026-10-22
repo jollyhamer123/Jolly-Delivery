@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e5243b">
+  <title>Jolly Delivery — Everything you love, delivered.</title>
+  <style>
+    :root{--red:#e5243b;--red-dark:#bd172b;--blue:#1455cc;--blue-dark:#0b347f;--navy:#101c35;--ink:#182238;--muted:#67738a;--paper:#f5f7fb;--white:#fff;--line:#e2e7f0;--shadow:0 12px 32px rgba(22,42,82,.10);--radius:20px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.top-strip{background:var(--blue-dark);color:#fff;text-align:center;padding:8px 14px;font-size:12px;font-weight:700;letter-spacing:.3px}.top-strip span{color:#ffb9c1}.site-header{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}.header-main{max-width:1400px;margin:auto;display:flex;align-items:center;gap:22px;padding:17px 24px}.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}.brand-mark{width:46px;height:46px;background:linear-gradient(135deg,var(--red) 0%,var(--red) 47%,var(--blue) 53%,var(--blue) 100%);color:#fff;border-radius:15px;display:grid;place-items:center;font-size:17px;font-weight:950;letter-spacing:-.8px;box-shadow:0 7px 16px #1455cc26;border:2px solid #fff}.brand-copy{line-height:1.02}.brand-name{font-size:22px;font-weight:950;letter-spacing:-1px}.brand-name .jolly{color:var(--red)}.brand-name .delivery{color:var(--blue)}.brand-tag{font-size:10px;color:var(--muted);font-weight:800;letter-spacing:1.8px;text-transform:uppercase;margin-top:5px}.search-wrap{display:flex;flex:1;min-width:120px;height:48px;border:2px solid var(--blue);border-radius:14px;overflow:hidden;background:#fff;transition:box-shadow .2s,border-color .2s}.search-wrap:focus-within{box-shadow:0 0 0 4px #1455cc19}.search-wrap input{border:0;outline:0;min-width:0;flex:1;padding:0 15px;color:var(--ink)}.search-wrap button{border:0;background:var(--blue);color:#fff;padding:0 19px;font-weight:850;display:flex;gap:8px;align-items:center;transition:background .2s}.search-wrap button:hover{background:var(--blue-dark)}.header-actions{display:flex;gap:10px;align-items:center}.icon-button{position:relative;border:1px solid var(--line);background:#fff;border-radius:13px;height:46px;padding:0 13px;display:flex;align-items:center;gap:8px;font-weight:800;white-space:nowrap;transition:transform .18s,border-color .18s}.icon-button:hover{transform:translateY(-1px);border-color:#b9c8e6}.cart-count{background:var(--red);color:#fff;border-radius:50px;min-width:22px;height:22px;padding:0 6px;display:grid;place-items:center;font-size:12px}.category-nav{max-width:1400px;margin:auto;padding:0 24px 13px;display:flex;gap:9px;overflow:auto;scrollbar-width:none}.category-nav::-webkit-scrollbar{display:none}.nav-chip{border:1px solid var(--line);color:#46516a;background:#fff;padding:9px 14px;border-radius:999px;font-size:13px;font-weight:750;white-space:nowrap;transition:all .2s}.nav-chip:hover,.nav-chip.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+    main{max-width:1400px;margin:auto;padding:26px 24px 60px}.hero{border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(115deg,#10254f 0%,#1455cc 57%,#2676ef 100%);color:#fff;min-height:305px;display:flex;align-items:center;padding:44px 5.2%;box-shadow:var(--shadow)}.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff27;border-radius:50%;pointer-events:none}.hero:before{width:400px;height:400px;right:7%;top:-190px}.hero:after{width:290px;height:290px;right:1%;bottom:-190px}.hero-content{position:relative;z-index:1;max-width:min(620px,56%)}.eyebrow{display:inline-flex;align-items:center;gap:7px;background:#ffffff19;border:1px solid #ffffff30;border-radius:999px;padding:8px 13px;font-size:12px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}.hero h1{font-size:clamp(34px,5vw,60px);letter-spacing:-2.6px;line-height:1.02;margin:18px 0 14px;max-width:650px}.hero h1 span{color:#ffb1bc}.hero p{font-size:16px;line-height:1.65;color:#e1eaff;max-width:480px;margin:0 0 24px}.primary-cta{border:0;background:var(--red);color:#fff;padding:14px 20px;border-radius:13px;font-weight:900;box-shadow:0 9px 22px #061a4680;transition:background .2s,transform .2s}.primary-cta:hover{background:#ff354e;transform:translateY(-2px)}.hero-photo-grid{position:absolute;right:5%;top:50%;transform:translateY(-50%) rotate(-4deg);width:min(36%,430px);height:250px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;z-index:1}.hero-photo-grid img{width:100%;height:100%;object-fit:cover;min-width:0;border-radius:18px;border:3px solid #fff;box-shadow:0 15px 30px #06173940;transition:transform .25s}.hero-photo-grid img:nth-child(2){transform:translateY(8px)}.hero-photo-grid img:nth-child(3){transform:translateY(-5px)}.hero-photo-grid img:hover{transform:scale(1.045) rotate(1deg)}.trust-row{display:flex;gap:18px;flex-wrap:wrap;padding:20px 2px 28px;color:#5e6a80;font-size:13px;font-weight:750}.trust-row span{display:flex;align-items:center;gap:7px}.trust-row b{color:var(--blue);font-size:16px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:9px 0 18px}.section-head h2{font-size:27px;letter-spacing:-.8px;margin:0}.section-head p{color:var(--muted);font-size:13px;margin:7px 0 0}.sort-wrap{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;font-weight:700;white-space:nowrap}.sort-wrap select{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;color:var(--ink);outline:none}.deals{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}.deal{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px;display:flex;gap:13px;align-items:center;min-width:0;transition:transform .2s,box-shadow .2s}.deal:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.deal-icon{width:58px;height:58px;flex-shrink:0;border-radius:14px;display:block;overflow:hidden;background:#edf2fb;border:1px solid #e2e7f0}.deal-icon img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .3s}.deal:hover .deal-icon img{transform:scale(1.08)}.deal strong{display:block;font-size:13px}.deal small{display:block;color:var(--muted);font-size:11px;margin-top:5px;line-height:1.4}.filter-row{display:flex;gap:8px;overflow:auto;padding:0 0 17px;scrollbar-width:none}.filter-row::-webkit-scrollbar{display:none}.filter-btn{background:transparent;border:1px solid #d9dfeb;border-radius:999px;padding:8px 14px;color:#68738a;font-weight:750;font-size:12px;white-space:nowrap}.filter-btn.active,.filter-btn:hover{border-color:var(--red);background:#fff0f2;color:var(--red-dark)}.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.product-card{background:#fff;border:1px solid var(--line);border-radius:19px;overflow:hidden;position:relative;transition:transform .22s,box-shadow .22s,border-color .22s;min-width:0;display:flex;flex-direction:column}.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d3dcef}.product-image{height:205px;background:linear-gradient(135deg,#f0f4fb,#e7edfa);position:relative;display:grid;place-items:center;overflow:hidden}.product-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}.product-card:hover .product-image img{transform:scale(1.05)}.image-placeholder{display:none!important}.product-image .photo-failed{display:none!important}.product-tag{position:absolute;top:12px;left:12px;color:#fff;background:var(--red);border-radius:7px;padding:6px 8px;font-size:10px;font-weight:900;letter-spacing:.3px;text-transform:uppercase}.wish-btn{position:absolute;right:11px;top:11px;background:#ffffffea;border:0;border-radius:50%;width:34px;height:34px;font-size:18px;color:#78849a;display:grid;place-items:center;transition:all .2s}.wish-btn:hover,.wish-btn.liked{color:var(--red);background:#fff0f2}.product-info{padding:15px;display:flex;flex-direction:column;flex:1}.product-category{color:var(--blue);text-transform:uppercase;letter-spacing:.8px;font-size:10px;font-weight:900}.product-title{font-size:15px;line-height:1.35;margin:7px 0 6px;font-weight:800;min-height:40px}.rating{color:#f4a623;font-size:12px;letter-spacing:1px}.rating span{letter-spacing:0;color:#8490a4;font-size:11px;margin-left:4px}.price-row{display:flex;align-items:baseline;gap:8px;margin:12px 0 13px}.price{font-size:23px;letter-spacing:-.8px;font-weight:950}.old-price{color:#9aa3b4;text-decoration:line-through;font-size:12px}.product-bottom{display:flex;align-items:center;gap:8px;margin-top:auto}.add-btn{flex:1;background:var(--blue);color:#fff;border:0;border-radius:10px;padding:11px 8px;font-size:12px;font-weight:900;transition:background .2s,transform .2s}.add-btn:hover{background:var(--blue-dark)}.quick-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--blue);font-size:18px;font-weight:900}.quick-btn:hover{border-color:var(--blue);background:#eef4ff}.empty-state{grid-column:1/-1;text-align:center;padding:65px 15px;background:#fff;border:1px dashed #cbd4e5;border-radius:20px}.empty-state div{font-size:42px}.empty-state h3{margin:10px 0 5px}.empty-state p{color:var(--muted);margin:0 0 16px}.newsletter{margin-top:52px;border-radius:24px;background:linear-gradient(120deg,#ffe9ed,#e7efff);padding:30px;display:flex;justify-content:space-between;align-items:center;gap:22px}.newsletter h2{margin:0 0 6px;letter-spacing:-.8px}.newsletter p{margin:0;color:#56647c;font-size:13px}.newsletter-form{display:flex;gap:8px;max-width:460px;width:100%}.newsletter-form input{min-width:0;flex:1;border:1px solid #ccd6e8;background:#fff;border-radius:12px;padding:13px;outline:0}.newsletter-form button{border:0;background:var(--red);color:white;border-radius:12px;padding:0 17px;font-weight:850}.footer{background:#101c35;color:#fff;padding:38px 24px;margin-top:30px}.footer-inner{max-width:1400px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-brand{font-size:20px;font-weight:950}.footer-brand span{color:#ff6477}.footer p{color:#c4cee0;font-size:12px;line-height:1.6;margin:7px 0 0}.footer-links{display:flex;gap:20px;color:#d9e2f5;font-size:12px;flex-wrap:wrap}.footer-note{max-width:1400px;margin:22px auto 0;padding-top:16px;border-top:1px solid #ffffff20;color:#aab8d1;font-size:11px;line-height:1.5}
+    .overlay{position:fixed;inset:0;background:#08152eb0;z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}.overlay.open{opacity:1;pointer-events:auto}.cart-drawer{position:fixed;top:0;right:0;width:min(440px,100%);height:100dvh;background:#fff;z-index:70;transform:translateX(102%);transition:transform .3s cubic-bezier(.2,.75,.25,1);display:flex;flex-direction:column;box-shadow:-20px 0 55px #09183223}.cart-drawer.open{transform:translateX(0)}.drawer-head{padding:22px 22px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.drawer-head h2{margin:0;font-size:22px}.drawer-head p{margin:4px 0 0;color:var(--muted);font-size:12px}.close-btn{border:1px solid var(--line);background:#fff;border-radius:11px;width:40px;height:40px;font-size:22px}.cart-items{flex:1;overflow:auto;padding:8px 20px}.cart-empty{padding:55px 10px;text-align:center;color:var(--muted)}.cart-empty .big{font-size:55px}.cart-empty h3{color:var(--ink);margin:15px 0 5px}.cart-item{display:grid;grid-template-columns:75px minmax(0,1fr) auto;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}.cart-thumb{width:75px;height:78px;border-radius:12px;overflow:hidden;background:#eef2fa}.cart-thumb img{width:100%;height:100%;object-fit:cover}.cart-item h4{font-size:13px;margin:2px 0 6px}.cart-item .cart-price{font-size:14px;font-weight:900;color:var(--blue)}.qty-controls{display:flex;align-items:center;gap:10px;margin-top:9px}.qty-controls button{width:25px;height:25px;border:1px solid var(--line);background:#fff;border-radius:7px;font-weight:900}.qty-controls span{font-size:12px;font-weight:800}.remove-item{border:0;background:transparent;color:#8a95a7;font-size:18px;align-self:start}.drawer-bottom{border-top:1px solid var(--line);padding:20px 22px 24px;box-shadow:0 -8px 20px #15294d08}.summary-row{display:flex;justify-content:space-between;margin:8px 0;font-size:13px;color:#657087}.summary-row.total{font-size:18px;font-weight:950;color:var(--ink);padding-top:10px;border-top:1px dashed var(--line);margin-top:14px}.checkout-btn{width:100%;border:0;background:var(--red);color:#fff;border-radius:13px;padding:15px;margin-top:15px;font-weight:950;transition:background .2s}.checkout-btn:hover{background:var(--red-dark)}.secure-note{text-align:center;color:#8590a5;font-size:10px;margin-top:10px}.modal-wrap{position:fixed;inset:0;display:grid;place-items:center;background:#08152ec4;z-index:90;padding:18px;opacity:0;pointer-events:none;transition:opacity .2s}.modal-wrap.open{opacity:1;pointer-events:auto}.modal{background:#fff;width:min(540px,100%);max-height:92dvh;overflow:auto;border-radius:22px;padding:26px;transform:translateY(10px);transition:transform .2s;box-shadow:0 24px 80px #06132b55}.modal-wrap.open .modal{transform:translateY(0)}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.modal h2{margin:0 0 6px;font-size:24px;letter-spacing:-.8px}.modal-intro{margin:0 0 20px;color:var(--muted);font-size:13px;line-height:1.5}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:850;color:#4f5b71}.field input,.field select{width:100%;border:1px solid #d8dfeb;border-radius:10px;padding:12px;outline:none;background:#fff}.field input:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1455cc14}.demo-banner{background:#eef4ff;border-radius:10px;padding:12px;color:#31528a;font-size:11px;line-height:1.5;margin:16px 0}.place-order{width:100%;padding:14px;border:0;border-radius:12px;background:var(--blue);color:white;font-weight:900}.success-view{text-align:center;padding:24px 8px 9px}.success-icon{width:78px;height:78px;margin:0 auto 16px;background:#e5f8ed;color:#159451;border-radius:50%;display:grid;place-items:center;font-size:40px}.success-view h2{margin:0 0 8px}.success-view p{color:var(--muted);font-size:13px;line-height:1.6}.success-view .primary-cta{margin-top:10px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:120;background:#101c35;color:#fff;border-radius:12px;padding:13px 18px;box-shadow:var(--shadow);font-size:13px;font-weight:800;transition:all .25s;white-space:nowrap;max-width:calc(100vw - 30px)}.toast.show{opacity:1;transform:translate(-50%,0)}.mobile-search{display:none}
+    @media(max-width:1050px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.deals{grid-template-columns:repeat(2,1fr)}.hero-photo-grid{right:3%;opacity:.9}.header-main{gap:14px}.brand-name{font-size:20px}.search-wrap{max-width:none}}
+    @media(max-width:720px){.top-strip{font-size:10px}.header-main{padding:12px 15px;gap:10px;flex-wrap:wrap}.brand-mark{width:41px;height:41px}.brand-name{font-size:18px}.brand-tag{font-size:9px}.header-main>.search-wrap{display:none}.header-actions{margin-left:auto;gap:7px}.icon-button{height:41px;padding:0 10px;font-size:12px}.mobile-search{display:flex;padding:0 15px 12px}.mobile-search .search-wrap{height:44px}.category-nav{padding:0 15px 12px}main{padding:17px 15px 40px}.hero{min-height:300px;padding:32px 24px;align-items:flex-start}.hero-content{max-width:100%}.hero h1{font-size:39px;letter-spacing:-1.8px;max-width:400px}.hero p{max-width:340px;font-size:14px}.hero-photo-grid{right:-60px;bottom:-25px;top:auto;transform:rotate(-4deg);width:56%;height:210px;opacity:.24}.hero-photo-grid img{border-width:2px;border-radius:12px}.trust-row{gap:11px;padding:17px 0 24px;font-size:11px}.section-head{align-items:flex-start;flex-direction:column;margin-top:5px}.section-head h2{font-size:24px}.sort-wrap{width:100%;justify-content:space-between}.sort-wrap select{flex:1;max-width:210px}.deals{gap:9px}.deal{padding:12px;gap:9px;border-radius:15px}.deal-icon{width:43px;height:43px;border-radius:11px}.deal strong{font-size:11px}.deal small{font-size:10px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product-image{height:160px}.product-info{padding:11px}.product-title{font-size:13px;min-height:36px}.price{font-size:20px}.old-price{font-size:10px}.add-btn{font-size:11px;padding:10px 5px}.quick-btn{width:34px;height:35px}.product-tag{font-size:9px;top:8px;left:8px}.wish-btn{width:30px;height:30px;right:8px;top:8px}.newsletter{padding:22px;flex-direction:column;align-items:stretch;margin-top:35px}.newsletter-form{max-width:none}.footer{padding:30px 18px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.modal{padding:22px}.modal h2{font-size:22px}}
+    @media(max-width:380px){.product-grid{gap:8px}.product-image{height:130px}.product-info{padding:9px}.deal{padding:9px}.deal-icon{width:35px;height:35px}.brand-tag{letter-spacing:1px}.header-actions .icon-button .action-text{display:none}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+    /* Product detail pages, page motion, and the Jolly Delivery signup experience */
+    .detail-page{padding:8px 0 34px;animation:pageEnter .34s cubic-bezier(.2,.75,.25,1) both}
+    .detail-page[hidden]{display:none!important}
+    body.detail-open main>.hero,body.detail-open main>.trust-row,body.detail-open main>#shopSection,body.detail-open main>.newsletter,body.detail-open footer,body.detail-open .category-nav{display:none!important}
+    body.detail-open main{padding-top:18px;min-height:calc(100vh - 130px)}
+    .back-link{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:white;color:var(--blue);font-weight:850;padding:10px 14px;border-radius:12px;margin:4px 0 22px;transition:transform .2s,background .2s,border-color .2s}
+    .back-link:hover{background:#eef4ff;border-color:#b9c8e6;transform:translateX(-2px)}
+    .detail-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:38px;align-items:start}
+    .detail-gallery{min-width:0}
+    .gallery-main{height:clamp(340px,42vw,560px);background:linear-gradient(135deg,#f1f5fc,#e7edfa);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:grid;place-items:center;box-shadow:var(--shadow)}
+    .gallery-main img{width:100%;height:100%;object-fit:cover;animation:photoEnter .28s ease both}
+    .gallery-thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+    .gallery-thumb{position:relative;padding:0;border:2px solid transparent;background:#fff;border-radius:13px;overflow:hidden;aspect-ratio:1;transition:border-color .2s,transform .2s}
+    .gallery-thumb:hover{transform:translateY(-2px)}.gallery-thumb.active{border-color:var(--blue);box-shadow:0 0 0 3px #1455cc18}
+    .gallery-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .gallery-main img.photo-failed,.gallery-thumb img.photo-failed{display:none!important}
+    .gallery-caption{color:var(--muted);font-size:11px;line-height:1.5;margin:9px 2px 0}
+    .detail-panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(22px,3vw,34px);box-shadow:var(--shadow)}
+    .detail-breadcrumb{color:var(--muted);font-size:12px;font-weight:800;margin-bottom:12px}.detail-breadcrumb span{color:var(--blue)}
+    .detail-panel h1{font-size:clamp(28px,3.1vw,40px);line-height:1.08;letter-spacing:-1.4px;margin:10px 0 12px}
+    .detail-tag{display:inline-block;background:#fff0f2;color:var(--red-dark);padding:7px 10px;border-radius:8px;font-size:10px;font-weight:950;text-transform:uppercase;letter-spacing:.6px}
+    .detail-rating{color:#f4a623;font-size:14px;letter-spacing:1px}.detail-rating span{color:var(--muted);letter-spacing:0;font-size:12px;margin-left:6px}
+    .detail-price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:19px 0 12px}.detail-price{font-size:35px;letter-spacing:-1.4px;font-weight:950}.detail-old{font-size:14px;text-decoration:line-through;color:#929caf}.detail-save{font-size:11px;font-weight:900;color:#12713d;background:#e4f8eb;padding:5px 8px;border-radius:7px}
+    .detail-description{font-size:14px;line-height:1.8;color:#526078;margin:14px 0 18px}
+    .detail-benefits{display:grid;gap:10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 0;margin:18px 0;color:#394861;font-size:12px;font-weight:700}
+    .detail-benefits div{display:flex;gap:10px;align-items:flex-start}.detail-benefits b{color:var(--blue);font-size:15px;line-height:1}
+    .detail-qty-row{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:20px 0 14px}.detail-qty-row label{font-size:13px;font-weight:850}.detail-qty{display:flex;border:1px solid var(--line);background:#fff;border-radius:11px;overflow:hidden;align-items:center}
+    .detail-qty button{width:39px;height:39px;border:0;background:#f4f7fc;color:var(--blue);font-size:21px;font-weight:850;transition:background .15s}.detail-qty button:hover{background:#e6edfb}.detail-qty output{min-width:40px;text-align:center;font-weight:900}
+    .detail-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.detail-add,.detail-buy{border:0;border-radius:12px;padding:14px 10px;color:white;font-weight:900;transition:transform .2s,filter .2s,box-shadow .2s}.detail-add{background:var(--blue)}.detail-buy{background:var(--red);box-shadow:0 8px 18px #e5243b24}.detail-add:hover,.detail-buy:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 10px 22px #0b347f22}
+    .detail-fineprint{font-size:11px;line-height:1.6;color:var(--muted);margin:13px 0 0}
+    .title-link{padding:0;border:0;background:none;text-align:left;color:inherit;font-weight:inherit;line-height:inherit;cursor:pointer}.title-link:hover{color:var(--blue);text-decoration:underline;text-underline-offset:3px}.product-image-click{cursor:pointer}.product-image-click:focus-visible,.title-link:focus-visible{outline:3px solid #1455cc80;outline-offset:3px}
+    .newsletter{align-items:flex-start}.newsletter-copy{max-width:440px}.newsletter-kicker{display:inline-flex;border-radius:999px;padding:6px 9px;background:#ffffffa8;color:var(--blue);font-size:10px;font-weight:950;letter-spacing:.9px;text-transform:uppercase;margin-bottom:10px}.newsletter-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px;align-items:center;max-width:550px}.newsletter-form>input[type=email]{width:100%;min-height:46px}.newsletter-form button{min-height:46px;white-space:nowrap;transition:transform .2s,background .2s}.newsletter-form button:hover{background:var(--red-dark);transform:translateY(-1px)}.newsletter-form .consent-line{grid-column:1/-1;display:flex;align-items:flex-start;gap:9px;color:#4f5c73;font-size:11px;line-height:1.5;cursor:pointer}.newsletter-form .consent-line input{flex:none;width:16px;height:16px;margin:1px 0 0;accent-color:var(--blue)}.newsletter-form .honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}.newsletter-form .signup-message{grid-column:1/-1;min-height:18px;margin:1px 0 0;font-size:12px;font-weight:800;color:var(--blue)}.signup-message.error{color:var(--red-dark)}.signup-message.success{color:#12713d}
+    .product-card{animation:cardEnter .35s both}.product-card:nth-child(2){animation-delay:.025s}.product-card:nth-child(3){animation-delay:.05s}.product-card:nth-child(4){animation-delay:.075s}.product-card:nth-child(5){animation-delay:.1s}.product-card:nth-child(6){animation-delay:.125s}.product-card:nth-child(7){animation-delay:.15s}.product-card:nth-child(8){animation-delay:.175s}
+    @keyframes pageEnter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes photoEnter{from{opacity:.55;transform:scale(1.015)}to{opacity:1;transform:scale(1)}}
+    @keyframes cardEnter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:900px){.detail-layout{grid-template-columns:1fr;gap:20px}.gallery-main{height:min(80vw,500px)}.detail-panel{padding:24px}.newsletter{flex-direction:column;align-items:stretch}.newsletter-copy{max-width:none}.newsletter-form{max-width:none}}
+    @media(max-width:520px){.detail-layout{gap:15px}.gallery-main{height:90vw;max-height:420px;border-radius:18px}.gallery-thumbs{gap:7px}.detail-panel{padding:19px;border-radius:18px}.detail-panel h1{font-size:29px}.detail-price{font-size:31px}.detail-actions{grid-template-columns:1fr}.newsletter-form{grid-template-columns:1fr}.newsletter-form .consent-line,.newsletter-form .signup-message{grid-column:1}.newsletter-form button{width:100%}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+    .auth-tabs{display:flex;gap:8px;padding:5px;background:#f0f4fb;border-radius:12px;margin:14px 0 18px}
+    .auth-tab{flex:1;border:0;border-radius:9px;padding:11px;background:transparent;color:#56627a;font-weight:850;transition:background .2s,color .2s,box-shadow .2s}
+    .auth-tab.active{background:#fff;color:var(--blue);box-shadow:0 2px 9px #10254f12}
+    .auth-submit{width:100%;border:0;border-radius:12px;padding:13px 16px;background:var(--blue);color:#fff;font-weight:900;margin-top:16px;transition:transform .2s,background .2s}
+    .auth-submit:hover{background:var(--blue-dark);transform:translateY(-1px)}
+    .auth-message{margin:13px 0 0;padding:11px 12px;border-radius:10px;background:#eff4ff;color:#24457f;font-size:13px;line-height:1.55;display:none}
+    .auth-message.show{display:block}.auth-message.error{background:#fff0f2;color:#a8172a}.auth-message.success{background:#e9f9f0;color:#146c3a}
+    .auth-note{font-size:12px;line-height:1.55;color:var(--muted);margin:16px 0 0}
+    .account-panel{border:1px solid var(--line);background:#f7f9fd;border-radius:14px;padding:18px}
+    .account-panel p{margin:7px 0 14px;font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+    .secondary-btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:10px 14px;font-weight:800}
+    .privacy-pill{display:inline-flex;align-items:center;gap:6px;background:#eaf7ef;color:#17683b;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:850;margin-bottom:9px}
+    [hidden]{display:none!important}
+  </style>
+</head>
+<body>
+  <div class="top-strip">🔴🔵 RED-HOT DEALS, BLUE-RIBBON SERVICE <span>•</span> FREE DELIVERY ON ORDERS OVER $75</div>
+  <header class="site-header">
+    <div class="header-main">
+      <a class="brand" href="#top" aria-label="Jolly Delivery home">
+        <div class="brand-mark" aria-hidden="true">JD</div>
+        <div class="brand-copy"><div class="brand-name"><span class="jolly">Jolly</span> <span class="delivery">Delivery</span></div><div class="brand-tag">Your cart, your happy place</div></div>
+      </a>
+      <form class="search-wrap" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="Search millions of things..." aria-label="Search products">
+        <button type="submit"><span>⌕</span> Search</button>
+      </form>
+      <div class="header-actions">
+        <button class="icon-button" id="loginButton" type="button">🔑 <span class="action-text">Log in</span></button>
+        <button class="icon-button" id="signupButton" type="button" style="background:var(--red);border-color:var(--red);color:#fff">✨ <span class="action-text">Sign up</span></button>
+        <button class="icon-button" id="accountButton" type="button" hidden>👤 <span class="action-text" id="accountLabel">My account</span></button>
+        <button class="icon-button" id="ordersButton" title="View your private orders">📦 <span class="action-text">Orders</span></button>
+        <button class="icon-button" id="cartButton" aria-label="Open your private shopping cart">🛒 <span class="action-text">Cart</span> <span class="cart-count" id="cartCount">0</span></button>
+      </div>
+    </div>
+    <div class="mobile-search">
+      <form class="search-wrap" id="mobileSearchForm" role="search"><input id="mobileSearchInput" type="search" placeholder="Search Jolly Delivery..." aria-label="Search products"><button type="submit">⌕</button></form>
+    </div>
+    <nav class="category-nav" aria-label="Shop categories" id="categoryNav"></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Your new favourite store</div>
+        <h1>Great finds.<br><span>Little prices.</span></h1>
+        <p>From everyday essentials to fun finds, discover something brilliant at Jolly Delivery. Your next favourite thing is only a click away.</p>
+        <button class="primary-cta" id="shopNow">Shop the collection&nbsp; →</button>
+      </div>
+      <div class="hero-photo-grid" aria-label="Featured product photography">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=520&q=85" alt="Wireless headphones" loading="eager" onerror="this.style.display='none'">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=520&q=85" alt="Red sneakers" loading="eager" onerror="this.style.display='none'">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=520&q=85" alt="Everyday wristwatch" loading="eager" onerror="this.style.display='none'">
+        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=520&q=85" alt="Compact camera" loading="eager" onerror="this.style.display='none'">
+      </div>
+    </section>
+    <div class="trust-row"><span><b>✓</b> Easy, happy shopping</span><span><b>↗</b> Deals worth a look</span><span><b>♡</b> Finds for everyone</span><span><b>🔒</b> Private customer accounts</span></div>
+
+    <section aria-label="Store highlights">
+      <div class="deals">
+        <div class="deal"><div class="deal-icon"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=160&q=80" alt="Backpack" loading="lazy" onerror="this.style.display='none'"></div><div><strong>Delivery deals</strong><small>Free delivery over $75</small></div></div>
+        <div class="deal"><div class="deal-icon"><img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=160&q=80" alt="Portable speaker" loading="lazy" onerror="this.style.display='none'"></div><div><strong>Hot prices</strong><small>Fresh deals to discover</small></div></div>
+        <div class="deal"><div class="deal-icon"><img src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=160&q=80" alt="Computer mouse" loading="lazy" onerror="this.style.display='none'"></div><div><strong>Shop your way</strong><small>Find it fast with search</small></div></div>
+        <div class="deal"><div class="deal-icon"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=160&q=80" alt="Skincare products" loading="lazy" onerror="this.style.display='none'"></div><div><strong>Something for everyone</strong><small>Home, tech, style & more</small></div></div>
+      </div>
+    </section>
+
+    <section id="shopSection">
+      <div class="section-head">
+        <div><h2 id="productsHeading">Popular picks</h2><p id="resultCount">Discover customer favourites across the store.</p></div>
+        <label class="sort-wrap" for="sortSelect">Sort by <select id="sortSelect"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="rating">Top rated</option><option value="name">Name: A–Z</option></select></label>
+      </div>
+      <div class="filter-row" id="filterRow" aria-label="Filter by category"></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </section>
+
+    <section id="detailPage" class="detail-page" hidden aria-label="Product details">
+      <button type="button" class="back-link" id="backToShop">← Back to shopping</button>
+      <div id="detailContent"></div>
+    </section>
+
+    <section class="newsletter" id="newsletterSection">
+      <div class="newsletter-copy"><div class="newsletter-kicker">The Jolly insider list</div><h2>Good deals, delivered to your inbox.</h2><p>Join the Jolly Delivery community for carefully picked deals, new finds, and occasional exclusive offers. Your first email is a warm welcome from us.</p></div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" name="email" placeholder="Your email address" aria-label="Your email address" autocomplete="email" required>
+        <button type="submit" id="newsletterSubmit">Join the community →</button>
+        <label class="consent-line"><input type="checkbox" name="consent" id="dealConsent" required><span>Yes, email me Jolly Delivery deals and product updates. I understand I can unsubscribe at any time.</span></label>
+        <input class="honeypot" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="signup-message" id="signupMessage" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer-inner"><div><div class="footer-brand">🔴 Jolly <span>Delivery</span></div><p>Little finds. Big happy energy.<br>A photo-first demo storefront with real stock product photography.</p></div><div class="footer-links"><a href="#shopSection">Shop all</a><a href="#shopSection" data-footer-category="Electronics">Electronics</a><a href="#shopSection" data-footer-category="Home">Home & kitchen</a><a href="#top">Back to top ↑</a></div></div><div class="footer-note">Checkout and order history are demo features; no real payments are collected or products shipped. Sign-in, cart, favourites and orders use per-account database access rules after Supabase is configured. Product photos are served from Unsplash and need an internet connection. Images are illustrative and may not show the exact catalogue SKU. Newsletter sign-up sends a welcome email when Brevo and Netlify are configured. Deal campaigns are sent only to subscribers who opted in.</div></footer>
+
+  <div class="overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head"><div><h2>Your cart</h2><p id="cartSubtitle">Good choices start here.</p></div><button class="close-btn" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="drawer-bottom" id="cartBottom">
+      <div class="summary-row"><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div>
+      <div class="summary-row"><span>Delivery</span><strong id="cartDelivery">$0.00</strong></div>
+      <div class="summary-row total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="checkout-btn" id="checkoutButton">Continue to checkout →</button>
+      <div class="secure-note">🔒 Demo checkout — no real payment is taken</div>
+    </div>
+  </aside>
+
+  <div class="modal-wrap" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal" id="checkoutModalContent">
+      <div class="modal-head"><div><h2 id="checkoutTitle">Almost yours!</h2><p class="modal-intro">Enter sample details to finish your demo purchase.</p></div><button class="close-btn" id="closeCheckout" aria-label="Close checkout">×</button></div>
+      <form id="checkoutForm">
+        <div class="form-grid">
+          <div class="field"><label for="firstName">First name</label><input id="firstName" name="firstName" autocomplete="given-name" required></div>
+          <div class="field"><label for="lastName">Last name</label><input id="lastName" name="lastName" autocomplete="family-name" required></div>
+          <div class="field full"><label for="email">Email address</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+          <div class="field full"><label for="address">Delivery address</label><input id="address" name="address" autocomplete="street-address" required></div>
+          <div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" required></div>
+          <div class="field"><label for="postal">Postal code</label><input id="postal" name="postal" autocomplete="postal-code" required></div>
+          <div class="field full"><label for="payment">Demo payment method</label><select id="payment" name="payment"><option>Demo card (no charge)</option><option>Pay on delivery (demo)</option><option>Jolly gift card (demo)</option></select></div>
+        </div>
+        <div class="demo-banner"><strong>🧪 Demo checkout.</strong> No payment is taken and no products are shipped. This order is saved to your signed-in Jolly account and only that account can read it. We do not ask for or store card numbers. Real payments would need a secure payment provider.</div>
+        <p id="checkoutError" class="auth-message error" aria-live="polite"></p>
+        <button class="place-order" type="submit">Place demo order · <span id="checkoutTotal">$0.00</span></button>
+      </form>
+    </div>
+  </div>
+  <div class="modal-wrap" id="ordersModal" role="dialog" aria-modal="true" aria-labelledby="ordersTitle"><div class="modal"><div class="modal-head"><div><h2 id="ordersTitle">Your demo orders 📦</h2><p class="modal-intro">Only orders saved to your signed-in account appear here.</p></div><button class="close-btn" id="closeOrders" aria-label="Close orders">×</button></div><div id="ordersList"></div></div></div>
+  <div class="modal-wrap" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="modal auth-modal">
+      <div class="modal-head"><div><div class="privacy-pill">🔒 Your account, your data</div><h2 id="authTitle">Welcome to Jolly Delivery</h2><p class="modal-intro" id="authIntro">Sign in to keep your cart and order history private and available next time.</p></div><button class="close-btn" id="closeAuth" aria-label="Close account dialog">×</button></div>
+      <div id="authTabs" class="auth-tabs" role="tablist" aria-label="Account access">
+        <button type="button" class="auth-tab active" data-auth-mode="login" role="tab" aria-selected="true">Log in</button>
+        <button type="button" class="auth-tab" data-auth-mode="signup" role="tab" aria-selected="false">Create account</button>
+      </div>
+      <form id="authForm">
+        <div class="field" id="authNameField" hidden><label for="authName">Your name</label><input id="authName" name="name" autocomplete="name" placeholder="Full name"></div>
+        <div class="field" style="margin-top:12px"><label for="authEmail">Email address</label><input id="authEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+        <div class="field" style="margin-top:12px"><label for="authPassword">Password</label><input id="authPassword" name="password" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters"></div>
+        <button class="auth-submit" type="submit" id="authSubmit">Log in securely</button>
+      </form>
+      <div id="accountPanel" class="account-panel" hidden><strong>You’re signed in ✅</strong><p id="accountEmail"></p><p>Your cart, favourites and order history are saved to your private account.</p><button type="button" class="secondary-btn" id="signOutButton">Sign out</button></div>
+      <div id="authMessage" class="auth-message" role="status" aria-live="polite"></div>
+      <p class="auth-note">We never store card numbers. Account access is handled by Supabase Authentication. Customer data is isolated with database row-level security when the setup in README is complete.</p>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script>
+    (()=>{
+      const products=[
+        {id:1,name:'Wireless Bluetooth Headphones',category:'Electronics',price:59.99,old:79.99,rating:4.8,reviews:326,tag:'Best seller',emoji:'🎧',image:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=720&q=80'},
+        {id:2,name:'Everyday Smart Watch',category:'Electronics',price:89.99,old:119.99,rating:4.6,reviews:184,tag:'Deal',emoji:'⌚',image:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=720&q=80'},
+        {id:3,name:'Classic Everyday Sneakers',category:'Fashion',price:49.99,old:64.99,rating:4.7,reviews:212,tag:'Popular',emoji:'👟',image:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=720&q=80'},
+        {id:4,name:'Insulated Travel Tumbler',category:'Home',price:19.99,old:27.99,rating:4.5,reviews:98,tag:'Fan favourite',emoji:'🥤',image:'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=720&q=80'},
+        {id:5,name:'Mini Instant Camera',category:'Electronics',price:74.99,old:89.99,rating:4.6,reviews:143,tag:'Trending',emoji:'📸',image:'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=720&q=80'},
+        {id:6,name:'Soft Knit Throw Blanket',category:'Home',price:34.99,old:44.99,rating:4.9,reviews:271,tag:'Top rated',emoji:'🧶',image:'https://images.unsplash.com/photo-1600369671236-e74521d4b6ad?auto=format&fit=crop&w=720&q=80'},
+        {id:7,name:'Daily Glow Skincare Set',category:'Beauty',price:29.99,old:39.99,rating:4.5,reviews:164,tag:'Self-care',emoji:'🧴',image:'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=720&q=80'},
+        {id:8,name:'Portable Bluetooth Speaker',category:'Electronics',price:39.99,old:54.99,rating:4.7,reviews:205,tag:'Best seller',emoji:'🔊',image:'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=720&q=80'},
+        {id:9,name:'Modern Desk Lamp',category:'Home',price:27.99,old:36.99,rating:4.4,reviews:86,tag:'Great find',emoji:'💡',image:'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=720&q=80'},
+        {id:10,name:'Comfy Everyday Hoodie',category:'Fashion',price:42.99,old:55.99,rating:4.6,reviews:132,tag:'Cozy pick',emoji:'🧥',image:'https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=720&q=80'},
+        {id:11,name:'Sunglasses — Everyday Edit',category:'Fashion',price:21.99,old:29.99,rating:4.3,reviews:77,tag:'Sunny day',emoji:'🕶️',image:'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=720&q=80'},
+        {id:12,name:'Stainless Kitchen Tool Set',category:'Kitchen',price:32.99,old:42.99,rating:4.5,reviews:121,tag:'Kitchen pick',emoji:'🍴',image:'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=720&q=80'},
+        {id:13,name:'Building Blocks Creative Kit',category:'Toys',price:24.99,old:32.99,rating:4.8,reviews:198,tag:'Playtime',emoji:'🧱',image:'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=720&q=80'},
+        {id:14,name:'Yoga Mat & Carry Strap',category:'Sports',price:28.99,old:37.99,rating:4.6,reviews:105,tag:'Move more',emoji:'🧘',image:'https://images.unsplash.com/photo-1592432678016-e910b452f9a2?auto=format&fit=crop&w=720&q=80'},
+        {id:15,name:'Mini Indoor Plant Pot',category:'Home',price:16.99,old:22.99,rating:4.7,reviews:89,tag:'Fresh look',emoji:'🪴',image:'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=720&q=80'},
+        {id:16,name:'Everyday Backpack',category:'Fashion',price:44.99,old:59.99,rating:4.5,reviews:173,tag:'On the go',emoji:'🎒',image:'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=720&q=80'},
+        {id:17,name:'Gaming Mouse — RGB Lights',category:'Electronics',price:35.99,old:47.99,rating:4.7,reviews:241,tag:'Gamer pick',emoji:'🖱️',image:'https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=720&q=80'},
+        {id:18,name:'Scented Candle Trio',category:'Home',price:22.99,old:30.99,rating:4.6,reviews:117,tag:'Relax & unwind',emoji:'🕯️',image:'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=720&q=80'},
+        {id:19,name:'Lip Care Gift Bundle',category:'Beauty',price:14.99,old:19.99,rating:4.4,reviews:93,tag:'Little treat',emoji:'💄',image:'https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=720&q=80'},
+        {id:20,name:'Football Practice Ball',category:'Sports',price:23.99,old:31.99,rating:4.5,reviews:74,tag:'Game on',emoji:'⚽',image:'https://images.unsplash.com/photo-1614632537423-1e6c2e7e0cc2?auto=format&fit=crop&w=720&q=80'},
+        {id:21,name:'Ceramic Mug Set of Two',category:'Kitchen',price:18.99,old:25.99,rating:4.8,reviews:188,tag:'Cozy mornings',emoji:'☕',image:'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=720&q=80'},
+        {id:22,name:'Puzzle Challenge — 1000 Pieces',category:'Toys',price:17.99,old:23.99,rating:4.3,reviews:67,tag:'Brain break',emoji:'🧩',image:'https://images.unsplash.com/photo-1606503153255-59d8b8b8216e?auto=format&fit=crop&w=720&q=80'},
+        {id:23,name:'Wireless Charging Pad',category:'Electronics',price:24.99,old:34.99,rating:4.6,reviews:156,tag:'Handy tech',emoji:'🔋',image:'https://images.unsplash.com/photo-1591290619762-c5886be6d7d1?auto=format&fit=crop&w=720&q=80'},
+        {id:24,name:'Weekend Duffel Bag',category:'Fashion',price:38.99,old:49.99,rating:4.5,reviews:112,tag:'Weekend ready',emoji:'🧳',image:'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=720&q=80'},
+        {id:25,name:'Digital Kitchen Scale',category:'Kitchen',price:20.99,old:27.99,rating:4.4,reviews:83,tag:'Kitchen helper',emoji:'⚖️',image:'https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=720&q=80'},
+        {id:26,name:'Resistance Bands Set',category:'Sports',price:15.99,old:21.99,rating:4.6,reviews:146,tag:'Fitness pick',emoji:'💪',image:'https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=720&q=80'},
+        {id:27,name:'Colourful Art Supply Kit',category:'Toys',price:26.99,old:35.99,rating:4.7,reviews:101,tag:'Get creative',emoji:'🎨',image:'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=720&q=80'},
+        {id:28,name:'Makeup & Travel Organizer',category:'Beauty',price:19.99,old:26.99,rating:4.5,reviews:94,tag:'Stay organized',emoji:'🪞',image:'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=720&q=80'}
+      ];
+      const categories=['All','Electronics','Home','Fashion','Beauty','Toys','Sports','Kitchen'];
+      const money=n=>new Intl.NumberFormat('en-CA',{style:'currency',currency:'CAD'}).format(n);
+      const $=s=>document.querySelector(s);
+      let activeCategory='All',searchTerm='',sortMode='featured',cart={},wishlist=[],orders=[],currentUser=null,authMode='login',authReady=false,toastTimer,stateWriteQueue=Promise.resolve();
+      const sbConfig=window.JOLLY_SUPABASE_CONFIG||{};
+      const supabaseConfigured=Boolean(sbConfig.url&&sbConfig.anonKey&&!String(sbConfig.url).includes('YOUR_PROJECT_ID')&&!String(sbConfig.anonKey).includes('YOUR_SUPABASE'));
+      const supabaseClient=(supabaseConfigured&&window.supabase&&window.supabase.createClient)?window.supabase.createClient(sbConfig.url,sbConfig.anonKey):null;
+      function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+      function setAuthMessage(message,type=''){
+        const box=$('#authMessage');box.textContent=message||'';box.className='auth-message'+(message?' show':'')+(type?' '+type:'');
+      }
+      function setAuthMode(mode){
+        authMode=mode==='signup'?'signup':'login';
+        const signingUp=authMode==='signup';
+        $('#authTitle').textContent=signingUp?'Create your Jolly account':'Welcome back';
+        $('#authIntro').textContent=signingUp?'Join the community and keep your shopping private.':'Log in to see your own cart and order history.';
+        $('#authNameField').hidden=!signingUp;$('#authName').required=signingUp;
+        $('#authPassword').autocomplete=signingUp?'new-password':'current-password';
+        $('#authSubmit').textContent=signingUp?'Create my account':'Log in securely';
+        document.querySelectorAll('[data-auth-mode]').forEach(btn=>{const active=btn.dataset.authMode===authMode;btn.classList.toggle('active',active);btn.setAttribute('aria-selected',active?'true':'false')});
+        setAuthMessage('');
+      }
+      function updateAccountUI(){
+        const signedIn=Boolean(currentUser);
+        $('#loginButton').hidden=signedIn;$('#signupButton').hidden=signedIn;$('#accountButton').hidden=!signedIn;
+        $('#accountLabel').textContent=signedIn?(currentUser.email||'My account').split('@')[0]:'My account';
+        $('#accountEmail').textContent=signedIn?currentUser.email||'Signed in':' ';
+        $('#authForm').hidden=signedIn;$('#authTabs').hidden=signedIn;$('#accountPanel').hidden=!signedIn;
+        if(signedIn){$('#authTitle').textContent='Your Jolly account';$('#authIntro').textContent='Your shopping stays linked to your account.';setAuthMessage('')}
+      }
+      function openAuth(mode='login',message=''){
+        if(!currentUser)setAuthMode(mode);
+        updateAccountUI();
+        setAuthMessage(message||(!supabaseClient?'Account setup is not connected yet. The site owner must configure supabase-config.js and run supabase-schema.sql from the project README before real accounts can be created.':''),message?'':'');
+        openModal('#authModal');
+      }
+      function requireAccount(feature='continue'){
+        if(supabaseClient&&!authReady){showToast('Restoring your saved account…');return false}
+        if(currentUser)return true;
+        const note=supabaseClient?`Log in or create an account to ${feature}. Your cart and orders are private to your account.`:`To ${feature}, the site owner must finish the Supabase setup described in README.md. Once connected, each customer will have a separate private cart and order history.`;
+        openAuth('signup',note);return false;
+      }
+      async function applySession(session){
+        const nextUser=session?.user||null;const changed=(currentUser?.id||null)!==(nextUser?.id||null);currentUser=nextUser;updateAccountUI();
+        if(!changed)return;
+        // Clear any checkout/customer details when accounts change on a shared device.
+        const checkoutForm=$('#checkoutForm');if(checkoutForm){checkoutForm.reset();if(currentUser?.email)$('#email').value=currentUser.email}
+        $('#authPassword').value='';
+        if(currentUser){await loadCustomerData();updateAccountUI()}
+        else{cart={};wishlist=[];orders=[];updateCart();renderProducts()}
+      }
+      async function loadCustomerData(){
+        if(!supabaseClient||!currentUser){cart={};wishlist=[];orders=[];updateCart();renderProducts();return}
+        const userId=currentUser.id;
+        const [stateResult,ordersResult]=await Promise.all([
+          supabaseClient.from('jolly_customer_state').select('cart,wishlist').eq('user_id',userId).maybeSingle(),
+          supabaseClient.from('jolly_orders').select('order_number,created_at,total,items').eq('user_id',userId).order('created_at',{ascending:false})
+        ]);
+        if(currentUser?.id!==userId)return;
+        if(stateResult.error||ordersResult.error){
+          console.error('Jolly account data load failed:',stateResult.error||ordersResult.error);
+          cart={};wishlist=[];orders=[];updateCart();renderProducts();
+          showToast('Account database setup is incomplete. See README.md.');return;
+        }
+        cart=stateResult.data?.cart&&typeof stateResult.data.cart==='object'?stateResult.data.cart:{};
+        wishlist=Array.isArray(stateResult.data?.wishlist)?stateResult.data.wishlist:[];
+        orders=(ordersResult.data||[]).map(o=>({number:o.order_number,date:new Date(o.created_at).toLocaleString('en-CA'),total:Number(o.total),items:Array.isArray(o.items)?o.items:[]}));
+        updateCart();renderProducts();
+      }
+      function persistCustomerState(){
+        if(!supabaseClient||!currentUser)return Promise.resolve(false);
+        const payload={user_id:currentUser.id,cart:{...cart},wishlist:[...wishlist],updated_at:new Date().toISOString()};
+        stateWriteQueue=stateWriteQueue.then(async()=>{
+          const {error}=await supabaseClient.from('jolly_customer_state').upsert(payload,{onConflict:'user_id'});
+          if(error){console.error('Jolly private cart save failed:',error);showToast('Could not sync your cart. Check your account database setup.');return false}
+          return true;
+        }).catch(error=>{console.error(error);return false});
+        return stateWriteQueue;
+      }
+      async function initializeAccounts(){
+        updateAccountUI();
+        if(!supabaseClient){authReady=true;return}
+        supabaseClient.auth.onAuthStateChange((_event,session)=>{if(authReady)setTimeout(()=>{applySession(session)},0)});
+        const {data,error}=await supabaseClient.auth.getSession();
+        if(error){console.error('Could not restore Jolly session:',error);authReady=true;return}
+        await applySession(data.session);authReady=true;
+      }
+      async function handleAuthSubmit(event){
+        event.preventDefault();
+        if(!supabaseClient){setAuthMessage('Supabase is not configured. Add your project URL and public anon/publishable key to supabase-config.js, then run supabase-schema.sql in the Supabase SQL Editor. Do not use a service-role key here.','error');return}
+        const form=new FormData(event.currentTarget),email=String(form.get('email')||'').trim(),password=String(form.get('password')||''),name=String(form.get('name')||'').trim();
+        const button=$('#authSubmit');button.disabled=true;button.textContent=authMode==='signup'?'Creating account…':'Signing in…';setAuthMessage('');
+        try{
+          if(authMode==='signup'){
+            const {data,error}=await supabaseClient.auth.signUp({email,password,options:{data:{full_name:name},emailRedirectTo:location.origin+location.pathname}});
+            if(error)throw error;
+            if(data.session){await applySession(data.session);$('#authPassword').value='';closeModal('#authModal');showToast('Welcome to Jolly Delivery! Your private account is ready.')}
+            else{setAuthMessage('Account created. Check your inbox to confirm your email, then log in. Your account data is kept private.','success');$('#authPassword').value=''}
+          }else{
+            const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
+            if(error)throw error;
+            await applySession(data.session);$('#authPassword').value='';closeModal('#authModal');showToast('Welcome back! Loading your private shopping data…');
+          }
+        }catch(error){setAuthMessage(error?.message||'We could not complete that account request. Please try again.','error')}
+        finally{button.disabled=false;button.textContent=authMode==='signup'?'Create my account':'Log in securely'}
+      }
+      async function signOut(){
+        if(!supabaseClient)return;
+        const {error}=await supabaseClient.auth.signOut();
+        if(error){showToast('Could not sign out. Please try again.');return}
+        await applySession(null);closeModal('#authModal');showToast('You have signed out. Your private cart and orders remain saved to your account.');
+      }
+      function productImg(p,cls=''){return `<img class="${cls}" data-product-photo-id="${p.id}" src="${p.image}" alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" onerror="window.jollyDeliveryPhotoFallback(this)">`}
+      window.jollyDeliveryPhotoFallback=function(img){
+        // Never substitute a different product's photo: keep the gallery/catalogue honest.
+        const p=products.find(item=>item.id===Number(img.dataset.productPhotoId));
+        img.onerror=null;
+        img.removeAttribute('src');
+        img.classList.add('photo-failed');
+        img.alt=p?`${p.name} photo unavailable`:'Product photo unavailable';
+      }
+      function renderCategories(){
+        $('#categoryNav').innerHTML=categories.map(c=>`<button class="nav-chip ${activeCategory===c?'active':''}" data-category="${c}">${c==='All'?'✨ Shop all':c}</button>`).join('');
+        $('#filterRow').innerHTML=categories.map(c=>`<button class="filter-btn ${activeCategory===c?'active':''}" data-category="${c}">${c==='All'?'All items':c}</button>`).join('');
+      }
+      function filteredProducts(){let arr=products.filter(p=>(activeCategory==='All'||p.category===activeCategory)&&(!searchTerm||`${p.name} ${p.category} ${p.tag}`.toLowerCase().includes(searchTerm)));if(sortMode==='price-low')arr.sort((a,b)=>a.price-b.price);if(sortMode==='price-high')arr.sort((a,b)=>b.price-a.price);if(sortMode==='rating')arr.sort((a,b)=>b.rating-a.rating);if(sortMode==='name')arr.sort((a,b)=>a.name.localeCompare(b.name));return arr}
+      function renderProducts(){const arr=filteredProducts();$('#resultCount').textContent=searchTerm||activeCategory!=='All'?`${arr.length} ${arr.length===1?'item':'items'} found${searchTerm?` for “${searchTerm}”`:''}.`:'Discover customer favourites across the store.';$('#productsHeading').textContent=searchTerm?'Search results':activeCategory==='All'?'Popular picks':activeCategory+' picks';
+        $('#productGrid').innerHTML=arr.length?arr.map(p=>`<article class="product-card"><div class="product-image product-image-click" role="button" tabindex="0" data-product-open="${p.id}" aria-label="View details for ${escapeHtml(p.name)}">${productImg(p)}<span class="product-tag">${escapeHtml(p.tag)}</span><button class="wish-btn ${wishlist.includes(p.id)?'liked':''}" data-wish="${p.id}" title="${wishlist.includes(p.id)?'Remove from':'Add to'} favourites" aria-label="Toggle favourite">${wishlist.includes(p.id)?'♥':'♡'}</button></div><div class="product-info"><div class="product-category">${escapeHtml(p.category)}</div><h3 class="product-title"><button class="title-link" data-product-open="${p.id}">${escapeHtml(p.name)}</button></h3><div class="rating" aria-label="Rated ${p.rating} out of 5">★★★★★<span>${p.rating} (${p.reviews})</span></div><div class="price-row"><span class="price">${money(p.price)}</span><span class="old-price">${money(p.old)}</span></div><div class="product-bottom"><button class="add-btn" data-add="${p.id}">＋ Add to cart</button><button class="quick-btn" data-quick="${p.id}" title="Quick add" aria-label="Quick add ${escapeHtml(p.name)}">＋</button></div></div></article>`).join(''):`<div class="empty-state"><div>🔎</div><h3>No products found</h3><p>Try another search or browse all of our finds.</p><button class="primary-cta" id="clearSearch">Show all products</button></div>`;
+      }
+      let currentProductId=null;
+      function productDescription(p){
+        const descriptions={
+          Electronics:'A practical everyday upgrade designed to fit effortlessly into your routine. Easy to enjoy, simple to use, and a smart pick for your desk, commute, or home setup.',
+          Fashion:'An easy-to-style favourite made for everyday plans. Pair it with your go-to essentials for a comfortable, versatile look that works across the week.',
+          Home:'A thoughtful home essential that adds a little extra comfort and personality to your space. Easy to work into your daily routine and lovely to keep close at hand.',
+          Kitchen:'A handy kitchen pick made to make everyday routines feel simpler. A useful addition for quick breakfasts, family dinners, or relaxed weekends at home.',
+          Toys:'Made for curious minds and creative moments, this pick is all about hands-on fun. A thoughtful gift idea for playtime, projects, or a cosy afternoon indoors.',
+          Sports:'A practical companion for staying active and building a routine. Great for practice sessions, home workouts, or keeping your gear ready to go.',
+          Beauty:'A feel-good self-care pick for your everyday routine. Keep it close for a small moment of care, a handy travel companion, or a gift that feels thoughtful.'
+        };
+        return `Meet your new favourite: ${p.name}. ${descriptions[p.category]||'A useful everyday find at a Jolly price.'} This sample catalogue listing is illustrative; check the final seller details, materials, dimensions, and availability before a real purchase.`;
+      }
+      function galleryImageVariant(image,width,height,crop){
+        const url=new URL(image);
+        url.searchParams.set('auto','format');
+        url.searchParams.set('fit','crop');
+        url.searchParams.set('w',String(width));
+        url.searchParams.set('h',String(height));
+        url.searchParams.set('q','85');
+        url.searchParams.set('crop',crop);
+        return url.toString();
+      }
+      function galleryImages(p){
+        // Every gallery frame comes from this exact product's photo, never another listing.
+        return [
+          {url:galleryImageVariant(p.image,960,960,'center'),label:`${p.name} product photo`,main:true},
+          {url:galleryImageVariant(p.image,760,760,'entropy'),label:`${p.name} alternate crop`,main:false},
+          {url:galleryImageVariant(p.image,720,900,'center'),label:`${p.name} close crop`,main:false},
+          {url:galleryImageVariant(p.image,900,680,'center'),label:`${p.name} wide crop`,main:false}
+        ];
+      }
+      function renderProductDetail(p){
+        const gallery=galleryImages(p),saving=Math.max(0,Math.round((1-p.price/p.old)*100));
+        const benefits={Electronics:['Everyday tech pick','Fits into a home or desk setup'],Fashion:['Easy to pair with everyday outfits','A versatile wardrobe find'],Home:['A thoughtful home refresh','Made for everyday routines'],Kitchen:['Handy everyday kitchen helper','A useful home essential'],Toys:['A fun gift idea','Encourages hands-on creativity'],Sports:['Ready for active days','A handy practice companion'],Beauty:['A small self-care treat','Easy to add to a routine']};
+        const points=benefits[p.category]||['A useful everyday find','A Jolly favourite'];
+        $('#detailContent').innerHTML=`<div class="detail-layout"><div class="detail-gallery"><div class="gallery-main"><img id="galleryMainImage" src="${gallery[0].url}" data-product-photo-id="${p.id}" data-current-photo="${gallery[0].url}" alt="${escapeHtml(p.name)}" loading="eager" decoding="async" onerror="window.jollyDeliveryPhotoFallback(this)"></div><div class="gallery-thumbs">${gallery.map((g,i)=>`<button type="button" class="gallery-thumb ${i===0?'active':''}" data-gallery-image="${i}" aria-label="Show ${escapeHtml(g.label)}"><img src="${g.url}" data-product-photo-id="${p.id}" data-current-photo="${g.url}" alt="${escapeHtml(g.label)}" loading="lazy" decoding="async" onerror="window.jollyDeliveryPhotoFallback(this)"></button>`).join('')}</div><p class="gallery-caption">Every gallery view uses the selected item’s own photograph, shown with different crops. No unrelated product photos are substituted.</p></div><div class="detail-panel"><div class="detail-breadcrumb"><span>Jolly Delivery</span> / ${escapeHtml(p.category)}</div><span class="detail-tag">${escapeHtml(p.tag)}</span><h1>${escapeHtml(p.name)}</h1><div class="detail-rating" aria-label="Rated ${p.rating} out of 5">★★★★★<span>${p.rating} (${p.reviews} sample ratings)</span></div><div class="detail-price-row"><span class="detail-price">${money(p.price)}</span><span class="detail-old">${money(p.old)}</span><span class="detail-save">SAVE ${saving}%</span></div><p class="detail-description">${escapeHtml(productDescription(p))}</p><div class="detail-benefits"><div><b>✓</b><span>${escapeHtml(points[0])}</span></div><div><b>✓</b><span>${escapeHtml(points[1])}</span></div><div><b>🚚</b><span>Free demo delivery on cart totals of $75 CAD or more</span></div><div><b>↻</b><span>Simple cart updates and demo order tracking</span></div></div><div class="detail-qty-row"><label for="detailQty">Quantity</label><div class="detail-qty"><button type="button" id="detailQtyMinus" aria-label="Decrease quantity">−</button><output id="detailQty" aria-live="polite">1</output><button type="button" id="detailQtyPlus" aria-label="Increase quantity">＋</button></div></div><div class="detail-actions"><button type="button" class="detail-add" id="detailAddToCart">＋ Add to cart</button><button type="button" class="detail-buy" id="detailBuyNow">Buy now →</button></div><p class="detail-fineprint">Prices are sample CAD prices for this demo catalogue. Checkout does not process payment or arrange actual delivery.</p></div></div>`;
+        $('#detailPage').hidden=false;
+      }
+      function openProductPage(id,addHistory=true){
+        const p=productById(id);if(!p)return;
+        currentProductId=p.id;renderProductDetail(p);document.body.classList.add('detail-open');
+        if(addHistory)history.pushState({productId:p.id},'',`#product-${p.id}`);
+        window.scrollTo({top:0,behavior:'smooth'});
+      }
+      function hideProductPage(){currentProductId=null;$('#detailPage').hidden=true;document.body.classList.remove('detail-open');window.scrollTo({top:0,behavior:'smooth'});}
+      function closeProductPage(){if(location.hash.startsWith('#product-')&&history.state&&history.state.productId){history.back();return}hideProductPage();history.replaceState(null,'',location.pathname+location.search)}
+      function getDetailQty(){return Math.max(1,Math.min(99,Number($('#detailQty')?.textContent||1)||1))}
+      function addProductQuantity(id,qty,notify=true){if(!requireAccount('add items to your private cart'))return false;const p=productById(id);if(!p)return false;cart[p.id]=(cart[p.id]||0)+qty;updateCart();persistCustomerState();if(notify)showToast(`${p.emoji} Added ${qty} × ${p.name} to your cart`);return true}
+      function productById(id){return products.find(p=>p.id===Number(id))}
+      function addToCart(id){if(!requireAccount('add items to your private cart'))return;const p=productById(id);if(!p)return;cart[p.id]=(cart[p.id]||0)+1;updateCart();persistCustomerState();showToast(`${p.emoji} Added ${p.name} to your cart`)}
+      function setQty(id,change){if(!requireAccount('edit your private cart'))return;const n=(cart[id]||0)+change;if(n<=0)delete cart[id];else cart[id]=n;updateCart();persistCustomerState()}
+      function cartEntries(){return Object.entries(cart).map(([id,qty])=>({p:productById(id),qty})).filter(x=>x.p&&x.qty>0)}
+      function subtotal(){return cartEntries().reduce((sum,x)=>sum+x.p.price*x.qty,0)}
+      function updateCart(){const items=cartEntries(),count=items.reduce((s,x)=>s+x.qty,0),sub=subtotal(),delivery=count===0||sub>=75?0:5.99;$('#cartCount').textContent=count>99?'99+':count;$('#cartSubtitle').textContent=count?`${count} ${count===1?'item':'items'} ready for checkout`:'Good choices start here.';$('#cartSubtotal').textContent=money(sub);$('#cartDelivery').textContent=delivery===0?(count?'FREE':'$0.00'):money(delivery);$('#cartTotal').textContent=money(sub+delivery);$('#checkoutTotal').textContent=money(sub+delivery);
+        $('#cartItems').innerHTML=items.length?items.map(({p,qty})=>`<div class="cart-item"><div class="cart-thumb">${productImg(p)}</div><div><h4>${p.name}</h4><div class="cart-price">${money(p.price)}</div><div class="qty-controls"><button data-qty="${p.id}" data-change="-1" aria-label="Decrease quantity">−</button><span>${qty}</span><button data-qty="${p.id}" data-change="1" aria-label="Increase quantity">＋</button></div></div><button class="remove-item" data-remove="${p.id}" title="Remove item" aria-label="Remove ${p.name}">×</button></div>`).join(''):`<div class="cart-empty"><div class="big">🛍️</div><h3>Your cart is waiting</h3><p>Add a few good finds and they will appear here.</p><button class="primary-cta" id="startShopping">Explore products</button></div>`;
+        $('#checkoutButton').disabled=!items.length;$('#checkoutButton').style.opacity=items.length?'1':'.55';$('#checkoutButton').style.cursor=items.length?'pointer':'not-allowed';}
+      function showToast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2600)}
+      function openCart(){if(!requireAccount('open your private cart'))return;$('#cartOverlay').classList.add('open');$('#cartDrawer').classList.add('open');$('#cartDrawer').setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+      function closeCart(){$('#cartOverlay').classList.remove('open');$('#cartDrawer').classList.remove('open');$('#cartDrawer').setAttribute('aria-hidden','true');if(!$('#checkoutModal').classList.contains('open')&&!$('#ordersModal').classList.contains('open')&&!$('#authModal').classList.contains('open'))document.body.style.overflow=''}
+      function openModal(id){$(id).classList.add('open');document.body.style.overflow='hidden'}
+      function closeModal(id){$(id).classList.remove('open');if(!$('#checkoutModal').classList.contains('open')&&!$('#ordersModal').classList.contains('open')&&!$('#authModal').classList.contains('open')&&!$('#cartDrawer').classList.contains('open'))document.body.style.overflow=''}
+      function renderOrders(){if(!orders.length){$('#ordersList').innerHTML='<div class="cart-empty"><div class="big">📦</div><h3>No orders yet</h3><p>Demo orders you place while signed in will appear here privately.</p></div>';return}$('#ordersList').innerHTML=orders.map(o=>`<div style="border:1px solid var(--line);border-radius:14px;padding:15px;margin:12px 0"><div style="display:flex;justify-content:space-between;gap:10px"><strong>Order ${escapeHtml(o.number)}</strong><strong style="color:var(--blue)">${money(o.total)}</strong></div><p style="color:var(--muted);font-size:11px;margin:7px 0">${escapeHtml(o.date)} · Demo order</p><div style="font-size:12px;line-height:1.7">${o.items.map(x=>`${x.qty} × ${escapeHtml(x.name)}`).join('<br>')}</div></div>`).join('')}
+      function syncSearch(value){if(document.body.classList.contains('detail-open')){hideProductPage();history.replaceState(null,'',location.pathname+location.search)}searchTerm=value.trim().toLowerCase();$('#searchInput').value=value;$('#mobileSearchInput').value=value;renderProducts();$('#shopSection').scrollIntoView({behavior:'smooth',block:'start'})}
+      $('#searchForm').addEventListener('submit',e=>{e.preventDefault();syncSearch($('#searchInput').value)});$('#mobileSearchForm').addEventListener('submit',e=>{e.preventDefault();syncSearch($('#mobileSearchInput').value)});
+      $('#searchInput').addEventListener('input',e=>{const value=e.target.value;$('#mobileSearchInput').value=value;searchTerm=value.trim().toLowerCase();renderProducts()});$('#mobileSearchInput').addEventListener('input',e=>{const value=e.target.value;$('#searchInput').value=value;searchTerm=value.trim().toLowerCase();renderProducts()});
+      document.addEventListener('click',e=>{const galleryThumb=e.target.closest('[data-gallery-image]');if(galleryThumb){const p=productById(currentProductId);if(p){const imgSet=galleryImages(p),choice=imgSet[Number(galleryThumb.dataset.galleryImage)];if(choice){$('#galleryMainImage').src=choice.url;$('#galleryMainImage').dataset.currentPhoto=choice.url;$('#galleryMainImage').dataset.photoTried='';$('#galleryMainImage').alt=`${p.name} — ${choice.label}`;$('#galleryMainImage').classList.remove('photo-failed');$('#galleryMainImage').onerror=()=>window.jollyDeliveryPhotoFallback($('#galleryMainImage'));document.querySelectorAll('[data-gallery-image]').forEach(btn=>btn.classList.toggle('active',btn===galleryThumb));}}return}const opener=e.target.closest('[data-product-open]');if(opener&&!e.target.closest('[data-wish]')){openProductPage(Number(opener.dataset.productOpen));return}const cat=e.target.closest('[data-category]');if(cat){activeCategory=cat.dataset.category;renderCategories();renderProducts();return}const add=e.target.closest('[data-add],[data-quick]');if(add){addToCart(add.dataset.add||add.dataset.quick);return}const wish=e.target.closest('[data-wish]');if(wish){const id=Number(wish.dataset.wish);if(!requireAccount('save private favourites'))return;wishlist=wishlist.includes(id)?wishlist.filter(x=>x!==id):[...wishlist,id];persistCustomerState();renderProducts();showToast(wishlist.includes(id)?'♥ Saved to your private favourites':'Removed from favourites');return}const qty=e.target.closest('[data-qty]');if(qty){setQty(Number(qty.dataset.qty),Number(qty.dataset.change));return}const remove=e.target.closest('[data-remove]');if(remove){if(!requireAccount('edit your private cart'))return;delete cart[remove.dataset.remove];updateCart();persistCustomerState();showToast('Item removed from cart');return}if(e.target.closest('#clearSearch')){activeCategory='All';searchTerm='';$('#searchInput').value='';$('#mobileSearchInput').value='';renderCategories();renderProducts();return}if(e.target.closest('#startShopping')){closeCart();$('#shopSection').scrollIntoView({behavior:'smooth'});return}const footerCat=e.target.closest('[data-footer-category]');if(footerCat){activeCategory=footerCat.dataset.footerCategory;renderCategories();renderProducts()}});
+      $('#sortSelect').addEventListener('change',e=>{sortMode=e.target.value;renderProducts()});$('#shopNow').addEventListener('click',()=>$('#shopSection').scrollIntoView({behavior:'smooth'}));$('#cartButton').addEventListener('click',openCart);
+      document.addEventListener('keydown',e=>{const opener=e.target.closest&&e.target.closest('.product-image-click[data-product-open]');if(opener&&!e.target.closest('[data-wish]')&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openProductPage(Number(opener.dataset.productOpen));}});
+      $('#backToShop').addEventListener('click',closeProductPage);$('.brand').addEventListener('click',e=>{if(document.body.classList.contains('detail-open')){e.preventDefault();closeProductPage();}});
+      $('#detailPage').addEventListener('click',e=>{if(e.target.closest('#detailQtyMinus')){$('#detailQty').textContent=String(Math.max(1,getDetailQty()-1));return}if(e.target.closest('#detailQtyPlus')){$('#detailQty').textContent=String(Math.min(99,getDetailQty()+1));return}if(e.target.closest('#detailAddToCart')){addProductQuantity(currentProductId,getDetailQty());return}if(e.target.closest('#detailBuyNow')){if(!requireAccount('buy items and save your order privately'))return;addProductQuantity(currentProductId,getDetailQty(),false);if(currentUser?.email)$('#email').value=currentUser.email;hideProductPage();history.replaceState(null,'',location.pathname+location.search);openModal('#checkoutModal');return}});
+      window.addEventListener('popstate',event=>{if(event.state&&event.state.productId){openProductPage(event.state.productId,false)}else if(!location.hash.startsWith('#product-')){hideProductPage()}});$('#closeCart').addEventListener('click',closeCart);$('#cartOverlay').addEventListener('click',closeCart);
+      $('#checkoutButton').addEventListener('click',()=>{if(!requireAccount('check out securely'))return;if(!cartEntries().length)return;closeCart();if(currentUser?.email)$('#email').value=currentUser.email;openModal('#checkoutModal')});$('#closeCheckout').addEventListener('click',()=>closeModal('#checkoutModal'));$('#checkoutModal').addEventListener('click',e=>{if(e.target.id==='checkoutModal')closeModal('#checkoutModal')});
+      $('#checkoutForm').addEventListener('submit',async e=>{
+        e.preventDefault();if(!requireAccount('place and save your order'))return;
+        const items=cartEntries();if(!items.length){closeModal('#checkoutModal');return}
+        if(!supabaseClient){$('#checkoutError').textContent='Connect Supabase to save this order privately. See README.md.';$('#checkoutError').classList.add('show');return}
+        const form=new FormData(e.currentTarget),sub=subtotal(),delivery=sub>=75?0:5.99,number='JD-'+Math.random().toString(36).slice(2,8).toUpperCase();
+        const itemSnapshot=items.map(({p,qty})=>({id:p.id,name:p.name,price:p.price,qty}));
+        const customer={firstName:String(form.get('firstName')||'').trim(),lastName:String(form.get('lastName')||'').trim(),email:String(form.get('email')||currentUser.email||'').trim(),address:String(form.get('address')||'').trim(),city:String(form.get('city')||'').trim(),postal:String(form.get('postal')||'').trim()};
+        const submit=e.submitter; if(submit){submit.disabled=true;submit.textContent='Saving private demo order…'}
+        $('#checkoutError').textContent='';$('#checkoutError').classList.remove('show');
+        try{
+          const {data:orderRow,error}=await supabaseClient.from('jolly_orders').insert({user_id:currentUser.id,order_number:number,total:Number((sub+delivery).toFixed(2)),items:itemSnapshot,customer,order_kind:'demo'}).select('order_number,created_at,total,items').single();
+          if(error)throw error;
+          orders.unshift({number:orderRow.order_number,date:new Date(orderRow.created_at).toLocaleString('en-CA'),total:Number(orderRow.total),items:orderRow.items||itemSnapshot});
+          cart={};await persistCustomerState();updateCart();
+          $('#checkoutModalContent').innerHTML=`<div class="success-view"><div class="success-icon">✓</div><h2>Order saved to your account!</h2><p>Thanks, ${escapeHtml(customer.firstName)}! Your demo order <strong>${escapeHtml(number)}</strong> is saved privately to your Jolly Delivery account.<br><br><strong>Total: ${money(sub+delivery)}</strong><br>No payment was taken and nothing will be delivered. This order is visible only to the account that placed it.</p><button class="primary-cta" id="finishCheckout">Back to shopping</button></div>`;
+          $('#finishCheckout').addEventListener('click',()=>{closeModal('#checkoutModal');location.reload()});
+        }catch(error){console.error('Could not save private order:',error);$('#checkoutError').textContent='Your order could not be saved. Check the Supabase table setup and try again.';$('#checkoutError').classList.add('show');if(submit){submit.disabled=false;submit.innerHTML='Place demo order · <span id="checkoutTotal">'+money(sub+delivery)+'</span>'}}
+      });
+      $('#ordersButton').addEventListener('click',async()=>{if(!requireAccount('view your private orders'))return;await loadCustomerData();renderOrders();openModal('#ordersModal')});$('#closeOrders').addEventListener('click',()=>closeModal('#ordersModal'));$('#ordersModal').addEventListener('click',e=>{if(e.target.id==='ordersModal')closeModal('#ordersModal')});
+      $('#loginButton').addEventListener('click',()=>openAuth('login'));
+      $('#signupButton').addEventListener('click',()=>openAuth('signup'));
+      $('#accountButton').addEventListener('click',()=>openAuth('login'));
+      $('#closeAuth').addEventListener('click',()=>closeModal('#authModal'));
+      $('#authModal').addEventListener('click',e=>{if(e.target.id==='authModal')closeModal('#authModal')});
+      $('#authForm').addEventListener('submit',handleAuthSubmit);
+      document.querySelectorAll('[data-auth-mode]').forEach(btn=>btn.addEventListener('click',()=>setAuthMode(btn.dataset.authMode)));
+      $('#signOutButton').addEventListener('click',signOut);
+
+      $('#newsletterForm').addEventListener('submit',async e=>{
+        e.preventDefault();const form=e.currentTarget,button=$('#newsletterSubmit'),msg=$('#signupMessage'),email=String(new FormData(form).get('email')||'').trim(),consent=$('#dealConsent').checked,company=String(new FormData(form).get('company')||'');
+        if(!consent){msg.className='signup-message error';msg.textContent='Please confirm you want to receive deal emails.';return}
+        button.disabled=true;button.textContent='Joining…';msg.className='signup-message';msg.textContent='Adding you to the community…';
+        try{const response=await fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,consent,company})});let result={};try{result=await response.json()}catch{}if(!response.ok||!result.success)throw new Error(result.error||'Email signup is not configured yet.');msg.className='signup-message success';msg.textContent=result.alreadySubscribed?'You’re already part of the community — welcome back!':result.welcomeSent?'You’re in! Check your inbox for a welcome email from Jolly Delivery.':'You’re subscribed! Your welcome email could not be sent yet; please check back later.';showToast(result.alreadySubscribed?'💌 You’re already on the list!':result.welcomeSent?'💌 Welcome to the Jolly community!':'Subscription saved; email delivery is pending');if(!result.alreadySubscribed)form.reset();}
+        catch(err){msg.className='signup-message error';msg.textContent='Real email signup needs the Netlify + Brevo setup in the project README. Your email was not sent.';showToast('Email signup is not configured yet');}
+        finally{button.disabled=false;button.textContent='Join the community →'}
+      });document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();closeModal('#checkoutModal');closeModal('#ordersModal');closeModal('#authModal')}});
+      renderCategories();renderProducts();updateCart();initializeAccounts();
+      const directProduct=location.hash.match(/^#product-(\d+)$/);if(directProduct&&productById(directProduct[1]))openProductPage(Number(directProduct[1]),false);
+    })();
+  </script>
+</body>
+</html>

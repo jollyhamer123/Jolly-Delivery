@@ -1,0 +1,6 @@
+{
+  "name": "jolly-delivery-storefront",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Jolly Delivery storefront with Supabase Auth/RLS customer accounts, private carts/orders, and Netlify Functions for Brevo emails"
+}
