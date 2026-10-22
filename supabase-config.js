@@ -4,6 +4,6 @@
   NEVER put a Supabase service_role or secret key in this file.
 */
 window.JOLLY_SUPABASE_CONFIG = {
-  url: "https://YOUR_PROJECT_ID.supabase.co",
-  anonKey: "YOUR_SUPABASE_PUBLIC_ANON_KEY"
+  url: "https://mswcyvdmhbventhwppqu.supabase.co",
+  anonKey: "sb_publishable_3D1Hqxg4uVgIn9kgRJewOA_mZKg7fvh"
 };
